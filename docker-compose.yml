@@ -4,7 +4,7 @@ services:
     environment:
       - PHILTER_LICENSE_KEY=asdf
       - PHILTER_NER_ENDPOINT=http://philter-ner:18080/
-    image: mtnfog/philter:1.6.0-SNAPSHOT
+    image: mtnfog/philter:1.5.2
     links:
       - philter-ner
     networks:
