@@ -14,7 +14,7 @@ docker-compose up
 Once the containers have started you can send a sample filter request:
 
 ```
-curl "http://localhost:8080/api/filter --data "George Washington was president and his ssn was 123-45-6789." -H "Content-type: text/plain"
+curl http://localhost:8080/api/filter --data "George Washington was president and his ssn was 123-45-6789." -H "Content-type: text/plain"
 ```
 
 Other example requests are available in the [Philter User’s Guide Quick Start](https://philter.mtnfog.com/introduction/quick-start).
