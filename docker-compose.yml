@@ -1,0 +1,22 @@
+version: '3'
+services:
+  philter:
+    environment:
+      - PHILTER_LICENSE_KEY=
+      - PHILTER_NER_ENDPOINT=http://philter-ner:18080/
+    image: mtnfog/philter:1.5.0
+    links:
+      - philter-ner
+    networks:
+      - philter
+    ports:
+      - "8080:8080"
+  philter-ner:
+    image: mtnfog/philter-ner:1.2.1.1.31b430c
+    networks:
+      - philter
+    ports:
+      - "18080:18080"
+networks:
+  philter:
+    driver: "bridge"
