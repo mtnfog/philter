@@ -2,7 +2,7 @@ version: '3'
 services:
   philter:
     environment:
-      - PHILTER_LICENSE_KEY=asdf
+      - PHILTER_LICENSE_KEY=
       - PHILTER_NER_ENDPOINT=http://philter-ner:18080/
     image: mtnfog/philter:1.5.2
     links:
@@ -12,7 +12,7 @@ services:
     ports:
       - "8080:8080"
   philter-ner:
-    image: mtnfog/philter-ner:1.5.0.914.a26bb36
+    image: mtnfog/philter-ner:1.5.2.965.f83a4e9
     networks:
       - philter
     ports:
