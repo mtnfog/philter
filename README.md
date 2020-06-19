@@ -19,6 +19,10 @@ curl http://localhost:8080/api/filter --data "George Washington was president an
 
 Other example requests are available in the [Philter User’s Guide Quick Start](https://philter.mtnfog.com/introduction/quick-start).
 
+### Configuring Philter
+
+Philter can be configured by setting environment variables. Refer to the [Philter User's Guide](https://philter.mtnfog.com/configuration/settings) for the available settings.
+
 ## Cloud Images
 
 For turnkey cloud images of Philter on AWS, Azure, or GCP visit https://www.mtnfog.com/products/philter/availability/.
