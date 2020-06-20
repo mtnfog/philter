@@ -21,7 +21,24 @@ Other example requests are available in the [Philter User’s Guide Quick Start]
 
 ### Configuring Philter
 
-Philter can be configured by setting environment variables. Refer to the [Philter User's Guide](https://philter.mtnfog.com/configuration/settings) for the available settings.
+Philter can be configured by setting environment variables. Refer to the [Philter User's Guide](https://philter.mtnfog.com/configuration/settings) for the available settings. Below is an example of configuring Philter to use a Redis cache:
+
+```
+version: '3'
+services:
+  philter:
+    depends_on:
+      - "redis"
+      - "philter-ner"
+    environment:
+      - PHILTER_CACHE_REDIS_ENABLED=true
+      - PHILTER_CACHE_REDIS_HOST=redis
+      - PHILTER_CACHE_REDIS_PORT=6379
+      - PHILTER_CACHE_REDIS_AUTH_TOKEN=randompassword
+      - PHILTER_LICENSE_KEY=
+      - PHILTER_NER_ENDPOINT=http://philter-ner:18080/
+...
+```
 
 ## Cloud Images
 
