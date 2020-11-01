@@ -8,7 +8,9 @@ To launch the Philter containers:
 
 ```
 curl -O https://raw.githubusercontent.com/mtnfog/philter/master/docker-compose.yml
+docker login docker.mtnfog.com
 docker-compose up
+docker logout
 ```
 
 Once the containers have started you can send a sample filter request:
