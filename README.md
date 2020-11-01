@@ -13,7 +13,7 @@ docker-compose up
 docker logout
 ```
 
-Once the containers have started you can send a sample filter request:
+Once the containers have started you can send a filter request to Philter:
 
 ```
 curl -k https://localhost:8080/api/filter --data "George Washington was president and his ssn was 123-45-6789." -H "Content-type: text/plain"
